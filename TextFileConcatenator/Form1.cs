@@ -88,11 +88,6 @@ namespace TextFileConcatenator
             else mergeFiles(textBox1.Text);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show(this, "Icon made by Freepik from www.flaticon.com.", "Credit info", MessageBoxButtons.OK, MessageBoxIcon.Information);
