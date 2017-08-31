@@ -66,6 +66,7 @@ namespace TextFileConcatenator
 
                 }
             }
+            MessageBox.Show(this, "Your files have been successfully combined into " + newFilename + "!", "Operation successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button1_Click(object sender, EventArgs e)
