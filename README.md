@@ -16,7 +16,7 @@ Click Start or navigate to the `\TextFileConcatenator\TextFileConcatenator\bin\D
 
 ### Screenies
 
-
+![The tool](https://github.com/pedromdcr/TextFileMerger/blob/master/TextFileConcatenator/screenshots/img1.png)
 
 ### Built With
 
