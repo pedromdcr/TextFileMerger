@@ -47,17 +47,21 @@ namespace TextFileConcatenator
                     const int chunkSize = 2 * 1024; // 2KB
                     using (var output = File.Create(path + "\\" + newFilename))
                     {
-                        for(int i = 0; i < fileNames.Length; i++)
+                        byte[] newline = Encoding.ASCII.GetBytes(Environment.NewLine);
+                        for (int i = 0; i < fileNames.Length; i++)
                         {
-                            if(i != fileNames.Length - 1)
-                                File.AppendAllText(fileNames[i], "\n");
+                            //if(i != fileNames.Length - 1)
+                            //    File.AppendAllText(fileNames[i], "\n");
                             using (var input = File.OpenRead(fileNames[i]))
                             {
                                 var buffer = new byte[chunkSize];
+                                
                                 int bytesRead;
                                 while ((bytesRead = input.Read(buffer, 0, buffer.Length)) > 0)
                                 {
                                     output.Write(buffer, 0, bytesRead);
+                                    if (i != fileNames.Length - 1)
+                                        output.Write(newline, 0, newline.Length);
                                 }
                             }
                             
