@@ -8,7 +8,7 @@ This project requires .NET 4.5 which you can download [here][1].
 
 ### Installing
 
-Just clone this project and build the solution in VS2015. 
+Just clone this project and build the solution in Visual Studio. 
 
 ### Deployment
 
