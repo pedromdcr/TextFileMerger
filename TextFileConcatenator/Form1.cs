@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TextFileConcatenator
@@ -16,7 +9,7 @@ namespace TextFileConcatenator
     public partial class Form1 : Form
     {
         OpenFileDialog ofd = new OpenFileDialog();
-        string path = @"C:\Users\Pedro\unityWorkspace\ExpertInterface\ExpertInterface\Logs";
+        string path = @"C:\Users\pedro\workspace\python\emoregulators_datasets\merged_exercises";
 
         public Form1()
         {
@@ -60,9 +53,10 @@ namespace TextFileConcatenator
                                 while ((bytesRead = input.Read(buffer, 0, buffer.Length)) > 0)
                                 {
                                     output.Write(buffer, 0, bytesRead);
-                                    if (i != fileNames.Length - 1)
-                                        output.Write(newline, 0, newline.Length);
+                                    
                                 }
+                                if (i != fileNames.Length - 1)
+                                    output.Write(newline, 0, newline.Length);
                             }
                             
                         }
