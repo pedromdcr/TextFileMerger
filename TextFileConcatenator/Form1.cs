@@ -9,7 +9,7 @@ namespace TextFileConcatenator
     public partial class Form1 : Form
     {
         OpenFileDialog ofd = new OpenFileDialog();
-        string path = @"C:\Users\pedro\workspace\python\emoregulators_datasets\merged_exercises";
+        string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
         public Form1()
         {
@@ -32,7 +32,7 @@ namespace TextFileConcatenator
             if(ofd.FileNames.Length > 0)
             {
                 string[] fileNames = ofd.FileNames;
-                
+                path = Path.GetDirectoryName(fileNames[0]);
                 if(IsValidFilename(newFilename) && newFilename.Length > 0)
                 {
                     if (!newFilename.EndsWith(".txt"))
